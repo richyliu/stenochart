@@ -4,6 +4,26 @@ const emptyKey = {
 };
 
 export const emptyLeftHand = {
+  sKey: { top: emptyKey, bottom: emptyKey },
+  middleKeys: [
+    { top: emptyKey, bottom: emptyKey },
+    { top: emptyKey, bottom: emptyKey },
+    { top: emptyKey, bottom: emptyKey },
+  ],
+};
+
+export const emptyThumbs = {
+  leftPair: [
+    { top: emptyKey, bottom: emptyKey },
+    { top: emptyKey, bottom: emptyKey },
+  ],
+  rightPair: [
+    { top: emptyKey, bottom: emptyKey },
+    { top: emptyKey, bottom: emptyKey },
+  ],
+};
+
+export const emptyRightHand = {
   starKey: { top: emptyKey, bottom: emptyKey },
   middleKeys: [
     { top: emptyKey, bottom: emptyKey },
@@ -20,4 +40,6 @@ export const emptyLeftHand = {
  */
 export const emptyOpts = {
   leftHand: emptyLeftHand,
+  thumbs: emptyThumbs,
+  rightHand: emptyRightHand,
 };

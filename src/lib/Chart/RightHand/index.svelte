@@ -1,16 +1,10 @@
 <script>
-  // http://bl.ocks.org/biovisualize/8187844
-  // https://spin.atomicobject.com/2014/01/21/convert-svg-to-png/
   export let keys;
+  export let width = 30;
+  export let height = 15;
 </script>
 
-<svg
-  width="300"
-  viewBox="0 0 50 50"
-  fill="blue"
-  stroke="green"
-  stroke-width="1"
->
+<svg viewBox="0 0 30 15" stroke-width="0.75" {width} {height}>
   <defs>
     <path id="upper" d="m0 0 4.3 0 0 7-4.3 0z" />
     <clipPath id="upper-clip">
@@ -36,10 +30,9 @@
   <g>
     <use
       xlink:href="#star-key"
-      stroke={keys.starKey.top.stroke}
-      stroke-width="0.75"
-      fill={keys.starKey.top.fill}
       clip-path="url(#star-key-clip)"
+      stroke={keys.starKey.top.stroke}
+      fill={keys.starKey.top.fill}
     />
   </g>
   <g transform="translate(5, 0)">
@@ -47,17 +40,15 @@
       <g transform={`translate(${i * 5}, 0)`}>
         <use
           xlink:href="#upper"
-          stroke={k.top.stroke}
-          stroke-width="0.75"
-          fill={k.top.fill}
           clip-path="url(#upper-clip)"
+          stroke={k.top.stroke}
+          fill={k.top.fill}
         />
         <use
           xlink:href="#lower"
-          stroke={k.bottom.stroke}
-          stroke-width="0.75"
-          fill={k.bottom.fill}
           clip-path="url(#lower-clip)"
+          stroke={k.bottom.stroke}
+          fill={k.bottom.fill}
         />
       </g>
     {/each}
@@ -65,17 +56,15 @@
   <g transform="translate(24.6, 0)">
     <use
       xlink:href="#dzkeys-upper"
-      stroke={keys.dzKey.top.stroke}
-      stroke-width="0.75"
-      fill={keys.dzKey.top.fill}
       clip-path="url(#dzkeys-upper-clip)"
+      stroke={keys.dzKey.top.stroke}
+      fill={keys.dzKey.top.fill}
     />
     <use
       xlink:href="#dzkeys-lower"
-      stroke={keys.dzKey.bottom.stroke}
-      stroke-width="0.75"
-      fill={keys.dzKey.bottom.fill}
       clip-path="url(#dzkeys-lower-clip)"
+      stroke={keys.dzKey.bottom.stroke}
+      fill={keys.dzKey.bottom.fill}
     />
   </g>
 </svg>
